@@ -1,0 +1,17 @@
+{
+  "name": "wcpubtools",
+  "version": "0.0.1",
+  "description": "Tools for publishing webcomics stored in Mobinge format.",
+  "main": "publish.js",
+  "author": "Sam Jones",
+  "license": "MIT",
+  "dependencies": {
+    "cloudfront-invalidate": "^1.0.1",
+    "command-line-args": "^5.1.1",
+    "glob": "^7.1.6",
+    "jsonfile": "^5.0.0",
+    "s3": "^4.4.0",
+    "twitter": "^1.7.1",
+    "zero-fill": "^2.2.3"
+  }
+}

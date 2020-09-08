@@ -1,0 +1,19 @@
+{
+    "baseDir": "/display/dir/for/mobinge",
+    "manifest": "/mobinge/style/manifest.json",
+    "imageDir": "/display/dir/for/images",
+    "blogDir": "/home/dir/for/jeckyl/_site/",
+    "comicUrl": "https://www.finalurl.com/",
+    "blogRemoteDir": "",
+    "remoteDir": "images",
+    "sourceDir": "/saved/GIMP/files",
+    "postDir": "/home/dir/for/jeckyl/_posts",
+    "manifestTmp": "tmp-manifest.json",
+    "manifestName": "manifest.json",
+    "blogFormat": "post/:year/:month/:day/entry-:entryNum.html",
+    "dayInterval": 8,
+    "twitterApiKey": "twitterkey",
+    "twitterApiSecret": "twittersecret",
+    "twitterTokenKey": "twittertoken",
+    "twitterTokenSecret": "twittersecret"
+}
