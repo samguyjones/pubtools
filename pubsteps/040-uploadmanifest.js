@@ -8,7 +8,7 @@ class UploadManifest extends Plugin {
     }
     
     async execute(params) {
-        await uploadFile('', '', this.settings.manifestTmp,
+        await uploadFile(this.settings.bucket,'', '', this.settings.manifestTmp,
             this.settings.manifestName);
     }
 }

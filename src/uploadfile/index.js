@@ -1,14 +1,14 @@
 const s3 = require('s3');
 const awsClient = s3.createClient();
 
-async function uploadFile(localBase, remoteBase, fileName, remoteFileName) {
+async function uploadFile(bucket, localBase, remoteBase, fileName, remoteFileName) {
     remoteFileName = remoteFileName || fileName;
     console.log('"' + remoteBase + remoteFileName + '"');
     return new Promise((resolve, reject) => {
         let uploader = awsClient.uploadFile({
             localFile: localBase + fileName,
             s3Params: {
-                Bucket: "www.inhumaneresourcescomic.com",
+                Bucket: bucket,
                 Key:    remoteBase + remoteFileName,
                 ACL: 'public-read'
             }
@@ -23,11 +23,11 @@ async function uploadFile(localBase, remoteBase, fileName, remoteFileName) {
 }
 
 async function uploadImage(fileName, settings) {
-    return uploadFile(settings.imageDir, settings.remoteDir, fileName, false);
+    return uploadFile(settings.bucket, settings.imageDir, settings.remoteDir, fileName, false);
 }
 
 async function uploadBlog(filename, settings) {
-    return uploadFile(settings.blogDir, settings.blogRemoteDir, filename,
+    return uploadFile(settings.bucket,settings.blogDir, settings.blogRemoteDir, filename,
         false);
 }
 
